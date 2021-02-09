@@ -10,7 +10,7 @@ Este ejemplo ha sido programado en X horas mientras charlábamos y comentábamos
 ¡Mira el código, modifícalo y disfruta!
 Es un código programado en directo para entretenimiento.
 
-## Vídeo/s relacionado en Youtube 🛠️
+## Vídeos relacionados en Youtube 🛠️
 
 * [Youtube] (https://www.youtube.com/watch?v=j1kdxDYejyg)
 
