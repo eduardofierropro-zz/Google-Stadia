@@ -1,11 +1,8 @@
 @import 'imports/variables' , 'imports/reset' , 'imports/mixins';
 
 body{
-    font-size: 100%;
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    background-color: var(--color-negro);
-    color:var(--color-blanco);
+    background-color: var(--negro);
+    color:var(--blanco);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -15,9 +12,9 @@ body{
     width: 100%;
     // background-color: salmon;
     padding:.8em 1.6em;
-    @include flexible(row, nowrap , space-between , center , initial);
+    @include flex(row, nowrap , space-between , center);
     font-size: .9em;
-    
+
     @media screen and (min-width:1400px){
         font-size: 1em;
     }
@@ -25,13 +22,13 @@ body{
     &__right{
         // width: 50%;
         // background-color: lime;
-        @include flexible( row , nowrap , flex-start, center , initial );
+        @include flex( row , nowrap , flex-start, center);
     }
     &__h1{
         width:100%;
-        max-width: 2.5em;
+        max-width: 1.3em;
         // background-color: lightblue;
-        margin:0 1.7em 0 0;
+        margin:0 1.3em 0 0;
     }
     &__button{
         padding:.6em 1em;
@@ -41,11 +38,11 @@ body{
         font-size: 1.1em;
 
         &:hover{
-            background-color: var(--color-negro-hover);
+            background-color: var(--blanco-hover);
         }
         &.active{
-            background-color: var(--color-negro-hover);
-            color:var(--color-naranja);
+            background-color: var(--blanco-hover);
+            color:var(--naranja);
             font-weight: 500;
         }
     }
@@ -58,18 +55,18 @@ body{
             transition: all .5s ease;
 
             &:hover{
-                background-color: var(--color-blanco-secundario);
+                background-color: var(--blanco-hover);
             }
         }
         
         &--profile{
             padding:.4em;
-            @include flexible( row , nowrap , center , center , initial );
+            @include flex( row , nowrap , center , center);
             border-radius: 50%;
             transition: all .5s ease;
             
             &:hover{
-                background-color: var(--color-blanco-secundario);
+                background-color: var(--blanco-hover);
             }
         }
     }
@@ -80,7 +77,7 @@ body{
     }
     &__ul{
         // background-color: lightgreen;
-        @include flexible( row , nowrap , flex-start, center , initial );
+        @include flex( row , nowrap , flex-start, center);
     }
     &__li{
         // background-color: orange;
@@ -89,19 +86,19 @@ body{
     &__left{
         
         // background-color: lime;
-        @include flexible( row , nowrap , flex-end, center , initial );
+        @include flex( row , nowrap , flex-end, center);
     }
     &__stadia{
         margin:0 .7em 0 0;
         padding:.6em 1.1em;
-        background-color: var(--color-negro-hover);
+        background-color: var(--blanco-hover);
         transition: all .5s ease;
         border-radius: .2em;
-        @include flexible( row , nowrap , flex-start , center , initial );
+        @include flex( row , nowrap , flex-start , center);
         cursor: pointer;
 
         &:hover{
-            background-color: var(--color-blanco-secundario);
+            background-color: var(--blanco-active);
         }
     }
     &__span{
@@ -124,7 +121,7 @@ body{
                 position: absolute;
                 width:.5em;
                 height: 100%;
-                background-color: var(--color-negro-hover);
+                background-color: var(--negro);
                 top:0;
                 left: -.3em;
                 transform: skewX(15deg);
@@ -135,7 +132,7 @@ body{
                 position: absolute;
                 width:.5em;
                 height: 100%;
-                background-color: var(--color-negro-hover);
+                background-color: var(--negro);
                 top:0;
                 right: -.3em;
                 transform: skewX(15deg);
@@ -170,15 +167,14 @@ body{
     margin: .8em auto 0;
 }
 
-
 .slider{
     margin: 0 0 1em;
-    @include flexible( row , nowrap , space-between , flex-start , initial );
+    @include flex( row , nowrap , space-between , flex-start);
     
     &__left{
-        width:80%;
+        width:75%;
         position: relative;
-        min-height: 75vh;
+        height: 37vw;
         background-color: lightgrey;
         overflow: hidden;
         border-radius: .5em;
@@ -186,18 +182,19 @@ body{
         box-shadow: 0px 0px 1em 0 rgba(0,0,0,0.5);
         transition: all .5s ease;
         outline: none;
+
         &:focus{
-            border:.5em solid var(--color-naranja);
+            border:.5em solid var(--naranja);
         }
     }
     &__overlay{
         width:100%;
-        max-width: 850px;
-        padding:1em 2em 2em;
+        padding:3em 2em 2em;
         position: absolute;
         bottom:0;
         left:0;
         z-index: 2;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 100%);
     }
     &__img{
         width: 100%;
@@ -211,16 +208,18 @@ body{
         transform: scale(1.01);
     }
     &__h2{
-        font-size: 2.2em;
-        font-weight: 600;
+        max-width: 550px;
+        font-size: 1.7em;
+        font-weight: 500;
         // margin: 0 0 .3em;
         line-height: 1.5em;
     }
     &__h3{
-        font-size: 1.6em;
-        font-weight: 600;
+        max-width: 550px;
+        font-size: 1.25em;
+        font-weight: 400;
         line-height: 1.5em;
-        color:var(--color-naranja);
+        color:var(--naranja);
     }
     &__video{
         position: absolute;
@@ -230,32 +229,86 @@ body{
         left:0;
         pointer-events: none;
         transition: all .5s ease;
+        transform: scale(1.1);
 
     }
-
     .slider__left:hover{
-        transform: scale(1.05);
+        transform: scale(1.02);
         .slider__img{
             opacity: 0;
             transform: scale(1.05);
         }
     }
+    
     &__right{
-        width:50%;
-        min-height: 50vh;
+        width:calc( 25% - .7em );
+        height: 37vw;
+        
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        grid-template-rows: repeat(3 , 1fr);
+        gap: .7em;
+
     }
     &__product{
         position: relative;
+        width:100%;
+        background: var(--negro-puro);
+        
+        padding: .2em;
+        border-radius: .5em;
+        overflow: hidden;
+        transition: all .4s ease;
+        transform: scale(1);
+        &:hover{
+            transform: scale(1.02);
+        }
     }
-   
-    &__h3{}
+    &__mask{
+        overflow: hidden;
+    }
+    &__video2{
+        border:1px solid black;
+        padding:0 .8em;
+        transform: scale(1.1) translateY(.4em);
+    }
+    &__h4{
+        padding: .8em;
+        font-weight: 400;
+    }
 }
 
 .descripcion{
-    background-color: lightblue;
-    &__h3{}
-    &__block{}
-    &__article{}
-    &__h4{}
-    &__p{}
+    margin: 4em 0 0;
+    
+    &__h3{
+        margin:0 0 1em;
+        font-size:1.6em;
+    }
+    &__block{
+        background-color: var(--descripcion);
+        border-radius: .5em;
+        padding: 2em;
+        box-shadow: 0 0 .8em rgba(0,0,0,.4);
+        @include flex( row , nowrap, space-between , center );
+        // Revisar este color con rgba
+        // color:var(--blanco-hover);
+    }
+    &__article{
+        width: calc( 100% / 2 );
+        position: relative;
+
+        &:nth-of-type(1){
+            border-right: 1px solid var(--blanco-hover);
+            margin: 0 3% 0 0;
+        }
+    }
+    
+    &__h4{
+        font-size: 1.3em;
+        margin: 0 0 .4em;
+    }
+    &__p{
+        line-height:1.7em;
+    }
 }

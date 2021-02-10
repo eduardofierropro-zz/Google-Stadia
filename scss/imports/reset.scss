@@ -18,8 +18,9 @@ img {
   object-position: center center;
 }
 a {
-  display: flex;
+  display: block;
   text-decoration: none;
+  color:inherit;
 }
 video {
   max-width: 100%;
