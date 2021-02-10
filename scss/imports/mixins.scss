@@ -38,3 +38,48 @@
 	}
 	gap: $gap ;
 }
+@mixin sans( $grosor : 400 , $style : 'normal' ){
+	@if( $grosor == 100 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Thin Regular';
+		}@else{
+			font-family: 'Product Sans Thin Italic';
+		}
+	}@else if( $grosor == 200 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Light Regular';
+		}@else{
+			font-family: 'Product Sans Light Italic';
+		}
+	}@else if( $grosor == 300 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Medium Regular';
+		}@else{
+			font-family: 'Product Sans Medium Italic';
+		}
+	}@else if( $grosor == 400 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Regular';
+		}@else{
+			font-family: 'Product Sans Italic';
+		}
+	}@else if( $grosor == 500 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Bold';
+		}@else{
+			font-family: 'Product Sans Bold Italic';
+		}
+	}@else if( $grosor == 600 ){
+		@if( $style == 'normal' ){
+			font-family: 'Product Sans Black Regular';
+		}@else{
+			font-family: 'Product Sans Black Italic';
+		}
+		
+	}
+	
+	
+	
+	
+	
+}
