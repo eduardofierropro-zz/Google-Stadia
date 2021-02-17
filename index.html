@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+    <script defer src="js/app.js"></script>
 </head>
 
 <body>
@@ -75,7 +76,7 @@
             <a class="slider__left" href="#" title="Consigue tus juegos gratis">
                 <div class="slider__cover">
                     <img class="slider__img" src="assets/video_cover.webp" alt="Juegos Resumen">  
-                    <video autoplay muted  loop loading="lazy" class="slider__video" src="assets/video/stadia.webm" controls></video> 
+                    <video muted playsinline loop loading="lazy" class="slider__video" src="assets/video/stadia.webm"></video> 
                 </div>
                 <div class="slider__overlay">
                     <h2 class="slider__h2">Consigue juegos gratis con Stadia Pro</h2>
@@ -85,7 +86,7 @@
             <div class="slider__right">
                 <a class="slider__product" href="#" title="Información del mando">
                     <div class="slider__mask">
-                        <video class="slider__video2" loading="lazy" muted>
+                        <video class="slider__video2" loading="lazy" playsinline muted>
                         <source src="assets/video/mini1.webmhd.webm" type="video/webm">
                         <source src="assets/video/mini1.mp4" type="video/mp4">
                     </video>
@@ -94,7 +95,7 @@
                 </a>
                 <a class="slider__product" href="#" title="Dispositivos compatibles">
                     <div class="slider__mask">
-                        <video class="slider__video2" loading="lazy" muted>
+                        <video class="slider__video2" loading="lazy" playsinline muted>
                         <source src="assets/video/mini2.webmhd.webm" type="video/webm">
                         <source src="assets/video/mini2.mp4" type="video/mp4">
                     </video>
@@ -103,7 +104,7 @@
                 </a>
                 <a class="slider__product" href="#" title="Consejos de conexión">
                     <div class="slider__mask">
-                        <video class="slider__video2" loading="lazy" muted>
+                        <video class="slider__video2" loading="lazy" playsinline muted>
                         <source src="assets/video/mini3.webmhd.webm" type="video/webm">
                         <source src="assets/video/mini3.mp4" type="video/mp4">
                     </video>
@@ -128,6 +129,9 @@
         </div>
     </main>
 
+    <div class="intro">
+        <img class="intro__img" src="assets/logo.png" alt="Google Stadia">
+    </div>
 
 </body>
 
