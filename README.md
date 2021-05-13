@@ -15,7 +15,6 @@ Este ejemplo ha sido programado en 6 horas mientras charlábamos y comentábamos
 Es un código programado en directo para entretenimiento.
 
 ## Vídeos relacionados en Youtube 🛠️
-
 * [Youtube](https://www.youtube.com/watch?v=j1kdxDYejyg)
 
 
