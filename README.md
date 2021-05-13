@@ -5,7 +5,7 @@ No ha sido probado para tener soporte crossbrowsing.
 Si te ha gustado o te ha servido coméntalo en un directo o sígueme por Twitch y Youtube 😊
 
 ## URL para ver el resultado
-Para verl proyecto en directo puedes verlo aquí [https://eduardofierropro.github.io/Google-Stadia/](https://eduardofierropro.github.io/Google-Stadia/)
+Para ver proyecto en directo puedes verlo aquí [https://eduardofierropro.github.io/Google-Stadia/](https://eduardofierropro.github.io/Google-Stadia/)
 
 ## Tiempo de programación ⏰
 Este ejemplo ha sido programado en 6 horas mientras charlábamos y comentábamos cosas en Twitch: [https://www.twitch.tv/eduardofierropro](https://www.twitch.tv/eduardofierropro)
